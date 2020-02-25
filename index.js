@@ -1,5 +1,5 @@
 // ⭐️ Example Challenge start ⭐️
-
+const inventory = require("./data/inventory.js");
 /**
  * ### Challenge `addNumbers`
  * 
@@ -102,7 +102,7 @@ console.log(makeSmartPerson('Mike'));
 
 
 // ⭐️ Example Test Data ⭐️
-
+/*
 var inventory = [
   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
   { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
@@ -120,7 +120,7 @@ var inventory = [
   { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
   /// ... Truncated
 ]
-
+*/
 /**
   * ### Example Array Challenge:
   * 
@@ -154,15 +154,15 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(inventory, index) {
+function getCarInfoByIndex(inv, index) {
   /* code here */
-  const carInventory = inventory.find(item, index) => {
+  const carInventory = inv.find((item, index) => {
     return index;
   })
   return `This is a ${carInventory.car_make} ${carInventory.car_model}`
 }
 
-console.log()
+console.log(getCarInfoByIndex(inventory,5));
 
 /**
  * ### Challenge `getLastCarInfo`

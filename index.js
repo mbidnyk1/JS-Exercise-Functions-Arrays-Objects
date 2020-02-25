@@ -81,9 +81,9 @@ console.log(getName({name:'Mike'}));
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(nameP) {
+function makeSmartPerson(nameP,) {
   /* code here */
-  return {
+  const smartPerson = {
     name:nameP,
     sum:function(num1,num2){
       return num1+num2;
@@ -92,6 +92,7 @@ function makeSmartPerson(nameP) {
       return 'Hello, my name is ' + nameP;
     }
   }
+  return smartPerson;
 }
 console.log(makeSmartPerson('Mike'));
 
@@ -99,7 +100,7 @@ console.log(makeSmartPerson('Mike'));
 
 
 
-/*
+
 // ⭐️ Example Test Data ⭐️
 
 var inventory = [
@@ -119,7 +120,7 @@ var inventory = [
   { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
   /// ... Truncated
 ]
-*/
+
 /**
   * ### Example Array Challenge:
   * 
@@ -155,7 +156,13 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+  const carInventory = inventory.find(item, index) => {
+    return index;
+  })
+  return `This is a ${carInventory.car_make} ${carInventory.car_model}`
 }
+
+console.log()
 
 /**
  * ### Challenge `getLastCarInfo`
